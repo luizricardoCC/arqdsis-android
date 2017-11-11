@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/activity_b"
+    tools:context="br.usjt.lifecycle.BActivity"
+    android:orientation="vertical"
+    android:background="@color/dark_green"
+    android:padding="8dp"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingBottom="16dp"
+        android:textColor="@color/light_blue"
+        android:textSize="@dimen/font_large"
+        android:gravity="center_horizontal"
+        android:text="@string/activity_b_label"/>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_start_a"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/btn_start_a_label"
+            android:onClick="startAActivity"/>
+
+        <Button
+            android:id="@+id/btn_start_c"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/btn_start_c_label"
+            android:onClick="startCActivity"
+            android:layout_toRightOf="@+id/btn_start_a"/>
+        <Button
+            android:id="@+id/btn_finish_b"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/btn_finish_b_label"
+            android:onClick="finishBActivity"
+            android:layout_toRightOf="@+id/btn_start_c"/>
+
+        <Button
+            android:id="@+id/btn_start_dialog"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/btn_start_dialog_label"
+            android:onClick="startDialog"
+            android:layout_toRightOf="@+id/btn_finish_b"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textColor="@color/light_blue"
+        android:textSize="@dimen/font_medium"
+        android:text="@string/lifecycle_method_list"/>
+
+    <ScrollView
+        android:layout_height="160dp"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/status_view_b"
+            android:background="@color/white"
+            android:padding="4dp"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="@color/black"
+            android:typeface="monospace"/>
+
+    </ScrollView>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textColor="@color/light_blue"
+        android:textSize="@dimen/font_medium"
+        android:text="@string/activity_status"/>
+
+    <TextView
+        android:id="@+id/status_view_all_b"
+        android:background="@color/white"
+        android:padding="4dp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:typeface="monospace"/>
+
+</LinearLayout>
